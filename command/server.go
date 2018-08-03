@@ -291,8 +291,6 @@ func (c *ServerCommand) AutocompleteFlags() complete.Flags {
 }
 
 func (c *ServerCommand) Run(args []string) int {
-	c.startMemProfiler()
-
 	f := c.Flags()
 
 	if err := f.Parse(args); err != nil {
@@ -339,6 +337,9 @@ func (c *ServerCommand) Run(args []string) int {
 		logger: c.logger.Named("grpclogfaker"),
 		log:    os.Getenv("VAULT_GRPC_LOGGING") != "",
 	})
+
+	// Start taking periodic heap snapshots
+	c.startMemProfiler()
 
 	// Automatically enable dev mode if other dev flags are provided.
 	if c.flagDevHA || c.flagDevTransactional || c.flagDevLeasedKV || c.flagDevThreeNode || c.flagDevFourCluster {
