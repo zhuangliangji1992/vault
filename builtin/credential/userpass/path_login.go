@@ -122,6 +122,9 @@ func (b *backend) pathLogin(ctx context.Context, req *logical.Request, d *framew
 			},
 			Alias: &logical.Alias{
 				Name: username,
+				Metadata: map[string]string{
+					"some_fake_metadata": username + "42",
+				},
 			},
 			BoundCIDRs: user.BoundCIDRs,
 		},

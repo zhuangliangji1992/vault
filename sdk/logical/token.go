@@ -26,6 +26,8 @@ const (
 	// TokenTypeDefaultBatch, configured on a mount, means that if
 	// TokenTypeDefault is sent back by the mount, create Batch tokens
 	TokenTypeDefaultBatch
+
+	TokenTypeIdentity
 )
 
 func (t TokenType) String() string {
@@ -40,6 +42,8 @@ func (t TokenType) String() string {
 		return "default-service"
 	case TokenTypeDefaultBatch:
 		return "default-batch"
+	case TokenTypeIdentity:
+		return "identity"
 	default:
 		panic("unreachable")
 	}

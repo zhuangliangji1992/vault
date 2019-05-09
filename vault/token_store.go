@@ -237,6 +237,17 @@ func (ts *TokenStore) paths() []*framework.Path {
 		},
 
 		{
+			Pattern: "idtoken$",
+
+			Callbacks: map[logical.Operation]framework.OperationFunc{
+				logical.UpdateOperation: ts.handleIDToken,
+			},
+
+			HelpSynopsis:    strings.TrimSpace(tokenCreateHelp),
+			HelpDescription: strings.TrimSpace(tokenCreateHelp),
+		},
+
+		{
 			Pattern: "lookup",
 
 			Fields: map[string]*framework.FieldSchema{
@@ -3112,6 +3123,8 @@ func (ts *TokenStore) tokenStoreRoleCreateUpdate(ctx context.Context, req *logic
 			tokenType = logical.TokenTypeDefaultService
 		case "default-batch":
 			tokenType = logical.TokenTypeDefaultBatch
+		case "identity":
+			tokenType = logical.TokenTypeIdentity
 		default:
 			return logical.ErrorResponse(fmt.Sprintf("invalid 'token_type' value %q", tokenTypeStr)), nil
 		}
