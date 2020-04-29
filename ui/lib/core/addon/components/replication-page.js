@@ -9,10 +9,6 @@ const MODE = {
 
 export default Component.extend({
   layout,
-  mode: computed('model', function() {
-    let mode = this.model.rm.mode;
-    return MODE[mode];
-  }),
   dr: computed('model', function() {
     let dr = this.model.dr;
     if (!dr) {
@@ -32,5 +28,9 @@ export default Component.extend({
       return `This ${this.mode} secondary has not been enabled.  You can do so from the Disaster Recovery Primary.`;
     }
     return `This cluster has not been enabled as a ${this.mode} Secondary. You can do so by enabling replication and adding a secondary from the ${this.mode} Primary.`;
+  }),
+  mode: computed('model', function() {
+    let mode = this.model.rm.mode;
+    return MODE[mode];
   }),
 });
