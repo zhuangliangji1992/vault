@@ -15,4 +15,5 @@ export default Component.extend({
   layout,
   data: null,
   isSecondary: null,
+  'data-test-replication-header': true,
 });
