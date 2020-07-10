@@ -164,9 +164,11 @@ that enable the feature.
 - `provider` `(string: <required>)` - Name of the provider. Must be set to "gsuite".
 - `gsuite_service_account` `(string: <required>)` - Path to the Google service account key file obtained from setup.
 - `gsuite_admin_impersonate` `(string: <required>)` - Email address of a G Suite admin to impersonate.
-- `gsuite_custom_schemas` `(string: <optional>` - Comma-separated list of G Suite [custom schemas](https://developers.google.com/admin-sdk/directory/v1/guides/manage-schemas).
+- `fetch_groups` `(bool: false)` - If set to true, groups will be fetched from G Suite.
+- `fetch_user_info` `(bool: false)` - If set to true, user info will be fetched from G Suite using the configured [user_custom_schemas](#user_custom_schemas).
+- `groups_recurse_max_depth` `(int: <optional>` - Group membership recursion max depth. Defaults to 0, which means don't recurse.
+- `user_custom_schemas` `(string: <optional>` - Comma-separated list of G Suite [custom schemas](https://developers.google.com/admin-sdk/directory/v1/guides/manage-schemas).
 Values set for G Suite users using custom schema fields will be fetched and made available as claims that can be used with [claim_mappings](/api/auth/jwt#claim_mappings).
-- `gsuite_recurse_max_depth` `(int: <optional>` - Group membership recursion max depth. Default is 0, which means don't recurse.
 
 Example configuration:
 ```
@@ -180,8 +182,10 @@ vault write auth/oidc/config -<<EOF
         "provider": "gsuite",
         "gsuite_service_account": "/path/to/service-account.json",
         "gsuite_admin_impersonate": "admin@gsuitedomain.com",
-        "gsuite_custom_schemas": "Education,Preferences",
-        "gsuite_recurse_max_depth": 5
+        "fetch_groups": true,
+        "fetch_user_info": true,
+        "groups_recurse_max_depth": 5,
+        "user_custom_schemas": "Education,Preferences"
     }
 }
 EOF
