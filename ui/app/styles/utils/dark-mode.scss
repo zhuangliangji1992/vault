@@ -1,0 +1,24 @@
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: $grey-darkest;
+    color: #efefef;
+  }
+  // a {
+  //   color: $ui-gray-300;
+
+  //   &:hover {
+  //     color: $ui-gray-500;
+  //   }
+
+  //   &.is-active {
+  //     color: $blue-300;
+  //   }
+  // }
+  // .breadcrumb li {
+  //   a {
+  //     &.is-active {
+  //      color: $blue-300;
+  //     }
+  //   }
+  // }
+}

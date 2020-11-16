@@ -16,7 +16,7 @@
     }
     &.is-active a,
     &.is-active .tab {
-      border-color: $blue;
+      border-color: currentColor;
       color: $blue;
     }
   }
