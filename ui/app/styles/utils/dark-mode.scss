@@ -1,24 +1,38 @@
+$darkShades: (
+  'black-bis': $white-bis,
+  'black-ter': $white-ter,
+  'grey-darker': $grey-lighter,
+  'grey-dark': $grey-light,
+  'grey': $grey,
+  'grey-light': $grey-dark,
+  'grey-lighter': $grey-darker,
+  'white-ter': $black-ter,
+  'white-bis': $black-bis,
+) !default;
+
 @media (prefers-color-scheme: dark) {
   body {
     background-color: $grey-darkest;
     color: #efefef;
   }
-  // a {
-  //   color: $ui-gray-300;
 
-  //   &:hover {
-  //     color: $ui-gray-500;
-  //   }
+  @each $name, $pair in $colors {
+    $color: nth($pair, 2);
+    .has-text-#{$name} {
+      color: $color !important;
+    }
 
-  //   &.is-active {
-  //     color: $blue-300;
-  //   }
-  // }
-  // .breadcrumb li {
-  //   a {
-  //     &.is-active {
-  //      color: $blue-300;
-  //     }
-  //   }
-  // }
+    a.has-text-#{$name} {
+      &:hover,
+      &:focus {
+        color: darken($color, 10%) !important;
+      }
+    }
+  }
+
+  @each $name, $shade in $darkShades {
+    .has-text-#{$name} {
+      color: $shade !important;
+    }
+  }
 }
