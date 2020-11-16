@@ -3,6 +3,38 @@
     background-color: $grey-darkest;
     color: #efefef;
   }
+
+  .input,
+  .input:active,
+  .input:focus {
+    background-color: black;
+  }
+
+  .input:active,
+  .input:focus,
+  .input:hover {
+    border-color: $yellow-300;
+    box-shadow: 0 0 0 0.125em rgba(251, 217, 94, 0.25);
+  }
+
+  .title {
+    color: white;
+  }
+
+  .title > a {
+    color: inherit;
+  }
+
+  .link,
+  a,
+  .breadcrumb a,
+  .li.is-active a {
+    color: yellow;
+  }
+
+  .ui-wizard {
+    background-color: lighten($grey-darkest, 10);
+  }
   // a {
   //   color: $ui-gray-300;
 

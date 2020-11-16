@@ -82,6 +82,12 @@ label {
   color: $grey-dark;
   padding-left: $size-8;
   padding-right: $size-8;
+
+  @media (prefers-color-scheme: dark) {
+    border-color: $grey-dark;
+    color: white;
+  }
+
   @include until($desktop) {
     font-size: 16px;
   }

@@ -7,5 +7,10 @@
   &.is-active {
     color: $menu-item-active-color;
     background-color: $menu-item-active-background-color;
+
+    @media (prefers-color-scheme: dark) {
+      color: lighten($yellow-300, 10);
+      // ARG TODO I believe this is necessary to override bulma
+    }
   }
 }

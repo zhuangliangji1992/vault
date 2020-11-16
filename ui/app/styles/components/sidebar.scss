@@ -81,8 +81,17 @@
       padding-left: $size-5;
       transition: 250ms border-width;
 
+      @media (prefers-color-scheme: dark) {
+        color: $ui-gray-300;
+      }
+
       &.is-active {
         border-right: 4px solid $blue;
+
+        @media (prefers-color-scheme: dark) {
+          border-right: 4px solid $yellow-300;
+          color: $yellow-300;
+        }
       }
     }
 

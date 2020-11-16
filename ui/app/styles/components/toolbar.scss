@@ -9,6 +9,13 @@
   border-top-color: $ui-gray-300;
   position: relative;
 
+  @media (prefers-color-scheme: dark) {
+    background-color: $grey-darkest;
+    border: 1px solid lighten($grey-darkest, 5);
+    border-bottom-color: lighten($grey-darkest, 10);
+    border-top-color: lighten($grey-darkest, 10);
+  }
+
   &::after {
     background: linear-gradient(to right, $ui-gray-010, rgba($ui-gray-010, 0));
     bottom: 0;
@@ -29,6 +36,9 @@
 .toolbar-label {
   padding: $spacing-xs;
   color: $grey;
+  @media (prefers-color-scheme: dark) {
+    color: $vault-gray-200;
+  }
 }
 
 .toolbar-scroller {
@@ -83,6 +93,10 @@
   border: 0;
   color: $black;
   transition: background-color $speed;
+
+  @media (prefers-color-scheme: dark) {
+    color: $yellow-300;
+  }
 
   &:hover {
     background-color: $ui-gray-100;

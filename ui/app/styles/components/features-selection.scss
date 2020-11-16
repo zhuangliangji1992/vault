@@ -2,6 +2,9 @@
   font-size: $size-6;
   font-weight: $font-weight-semibold;
   color: $grey;
+  @media (prefers-color-scheme: dark) {
+    color: $vault-gray-200;
+  }
 }
 
 .access-information {
