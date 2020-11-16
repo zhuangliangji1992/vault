@@ -1,5 +1,8 @@
 .box {
   box-shadow: 0 0 0 1px rgba($grey-dark, 0.3);
+  @media (prefers-color-scheme: dark) {
+    background: $grey-darkest;
+  }
 }
 .box.is-fullwidth {
   padding-left: 0;
