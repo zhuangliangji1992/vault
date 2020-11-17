@@ -57,6 +57,19 @@ $darkShades: (
     background-color: lighten($grey-darkest, 10);
   }
 
+  .button:focus:not(:active),
+  .toolbar-link:focus:not(:active),
+  .list-pagination .pagination-previous:focus:not(:active),
+  .list-pagination .pagination-next:focus:not(:active),
+  .file-delete-button:focus:not(:active),
+  .button.is-focused:not(:active),
+  .is-focused.toolbar-link:not(:active),
+  .list-pagination .is-focused.pagination-previous:not(:active),
+  .list-pagination .is-focused.pagination-next:not(:active),
+  .is-focused.file-delete-button:not(:active) {
+    box-shadow: 0 0 0 0.125em rgba(251, 217, 94, 0.25);
+  }
+
   @each $name, $pair in $colors {
     $color: nth($pair, 2);
     .has-text-#{$name} {

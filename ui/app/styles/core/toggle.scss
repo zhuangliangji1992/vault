@@ -39,6 +39,10 @@
   border-radius: 0.75rem;
   background: $ui-gray-300;
   content: '';
+  @media (prefers-color-scheme: dark) {
+    background: black;
+    border-color: white;
+  }
 }
 .toggle[type='checkbox'] + label::after {
   display: block;
@@ -55,9 +59,15 @@
 }
 .toggle[type='checkbox']:checked + label::before {
   background: $ui-gray-700;
+  @media (prefers-color-scheme: dark) {
+    border-color: $vault-yellow;
+  }
 }
 .toggle[type='checkbox']:checked + label::after {
   left: 1.625rem;
+  @media (prefers-color-scheme: dark) {
+    background: $vault-yellow;
+  }
 }
 
 /* CUSTOM */
@@ -96,7 +106,13 @@
 }
 .toggle[type='checkbox']:focus + label {
   box-shadow: 0 0 1px $blue;
+  @media (prefers-color-scheme: dark) {
+    box-shadow: 0 0 1px $vault-yellow;
+  }
 }
 .toggle[type='checkbox'].is-success:checked + label::before {
   background: $blue;
+  @media (prefers-color-scheme: dark) {
+    background: black;
+  }
 }
