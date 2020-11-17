@@ -6,6 +6,11 @@
   justify-content: center;
   padding: $spacing-xxl $spacing-s;
   box-shadow: 0 -2px 0 -1px $ui-gray-300;
+
+  @media (prefers-color-scheme: dark) {
+    color: white;
+    background: $ui-gray-800;
+  }
 }
 
 .empty-state-content {
@@ -18,6 +23,10 @@
   font-weight: $font-weight-semibold;
   line-height: 1.2;
   margin-bottom: $spacing-xs;
+
+  @media (prefers-color-scheme: dark) {
+    color: $ui-gray-010;
+  }
 }
 
 .empty-state-actions {
@@ -30,6 +39,10 @@
     font-size: $size-8;
     font-weight: $font-weight-semibold;
     text-decoration: none;
+
+    @media (prefers-color-scheme: dark) {
+      color: $yellow-300;
+    }
   }
 
   > * + * {

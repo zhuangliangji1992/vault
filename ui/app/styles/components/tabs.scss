@@ -18,6 +18,10 @@
     &.is-active .tab {
       border-color: currentColor;
       color: $blue;
+
+      @media (prefers-color-scheme: dark) {
+        color: $yellow-300;
+      }
     }
   }
 
