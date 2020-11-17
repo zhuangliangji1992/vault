@@ -95,13 +95,17 @@
   transition: background-color $speed;
 
   @media (prefers-color-scheme: dark) {
-    color: $yellow-300;
+    color: $vault-yellow;
   }
 
   &:hover {
     background-color: $ui-gray-100;
     border: 0;
     color: $blue;
+    @media (prefers-color-scheme: dark) {
+      color: $vault-yellow;
+      background-color: darken($grey-darkest, 5);
+    }
   }
 
   &:active {

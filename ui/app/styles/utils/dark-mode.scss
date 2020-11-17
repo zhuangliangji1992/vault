@@ -25,7 +25,7 @@ $darkShades: (
   .input:active,
   .input:focus,
   .input:hover {
-    border-color: $yellow-300;
+    border-color: $vault-yellow;
     box-shadow: 0 0 0 0.125em rgba(251, 217, 94, 0.25);
   }
 
@@ -41,7 +41,7 @@ $darkShades: (
   a,
   .breadcrumb a,
   .li.is-active a {
-    color: yellow;
+    color: $vault-yellow;
   }
 
   .ui-wizard {
