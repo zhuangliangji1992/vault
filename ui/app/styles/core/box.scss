@@ -2,6 +2,7 @@
   box-shadow: 0 0 0 1px rgba($grey-dark, 0.3);
   @media (prefers-color-scheme: dark) {
     background: $grey-darkest;
+    color: $ui-gray-050;
   }
 }
 .box.is-fullwidth {

@@ -68,3 +68,8 @@
     margin-bottom: (5/14) + 0rem;
   }
 }
+
+@mixin dark-mode-focus {
+  border-color: $vault-yellow;
+  box-shadow: 0 0 0 0.125em rgba(251, 217, 94, 0.25);
+}

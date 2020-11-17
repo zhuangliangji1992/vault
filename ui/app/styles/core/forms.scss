@@ -23,6 +23,9 @@ label {
   display: inline-block;
   font-size: $body-size;
   font-weight: $font-weight-bold;
+  @media (prefers-color-scheme: dark) {
+    color: $ui-gray-050;
+  }
 
   &:not(:last-child) {
     margin-bottom: 0.25rem;
@@ -82,11 +85,6 @@ label {
   color: $grey-dark;
   padding-left: $size-8;
   padding-right: $size-8;
-
-  @media (prefers-color-scheme: dark) {
-    border-color: $grey-dark;
-    color: white;
-  }
 
   @include until($desktop) {
     font-size: 16px;

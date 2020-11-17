@@ -18,15 +18,24 @@ $darkShades: (
 
   .input,
   .input:active,
-  .input:focus {
-    background-color: black;
-  }
-
-  .input:active,
   .input:focus,
-  .input:hover {
-    border-color: $vault-yellow;
-    box-shadow: 0 0 0 0.125em rgba(251, 217, 94, 0.25);
+  .input:hover,
+  .textarea,
+  .textarea:active,
+  .textarea:focus,
+  .textarea:hover,
+  .select select {
+    background-color: black;
+    border-color: $grey-dark;
+    color: white;
+  }
+  .input:focus,
+  .textarea:focus,
+  .select:focus,
+  .input:active,
+  .textarea:active,
+  .select:active {
+    @include dark-mode-focus;
   }
 
   .title {
