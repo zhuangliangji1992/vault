@@ -156,4 +156,22 @@
       animation: drop-fade-below 0.15s reverse;
     }
   }
+  @media (prefers-color-scheme: dark) {
+    background-color: lighten($grey-darkest, 10);
+
+    .box,
+    button.link,
+    a {
+      background-color: lighten($grey-darkest, 10);
+      color: $ui-gray-010;
+    }
+    button.link:hover,
+    a:hover {
+      background-color: lighten($grey-darkest, 5);
+      color: $ui-gray-010;
+    }
+    .menu-label {
+      color: $ui-gray-200;
+    }
+  }
 }
