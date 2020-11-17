@@ -1,11 +1,11 @@
 $darkShades: (
   'black-bis': $white-bis,
   'black-ter': $white-ter,
-  'grey-darker': $grey-lighter,
-  'grey-dark': $grey-light,
-  'grey': $grey,
-  'grey-light': $grey-dark,
-  'grey-lighter': $grey-darker,
+  'grey-darker': $ui-gray-010,
+  'grey-dark': $ui-gray-050,
+  'grey': $ui-gray-100,
+  'grey-light': $ui-gray-300,
+  'grey-lighter': $ui-gray-500,
   'white-ter': $black-ter,
   'white-bis': $black-bis,
 ) !default;
