@@ -68,12 +68,21 @@
     background: $yellow-010;
     border: 1px solid $yellow-100;
 
+    @media (prefers-color-scheme: dark) {
+      background: $dark-highlight;
+      border: 1px solid $yellow-500;
+    }
+
     .message-icon {
       color: $yellow-500;
     }
 
     .message-title {
       color: $orange-700;
+
+      @media (prefers-color-scheme: dark) {
+        color: white;
+      }
     }
   }
 
