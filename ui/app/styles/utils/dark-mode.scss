@@ -11,7 +11,8 @@ $darkShades: (
 ) !default;
 
 @media (prefers-color-scheme: dark) {
-  body {
+  body,
+  html {
     background-color: $grey-darkest;
     color: #efefef;
   }
@@ -52,6 +53,10 @@ $darkShades: (
   .li.is-active a {
     color: $vault-yellow;
   }
+  .tabs a:hover {
+    background-color: transparent;
+    color: $ui-gray-300;
+  }
 
   .ui-wizard {
     background-color: lighten($grey-darkest, 10);
@@ -74,6 +79,12 @@ $darkShades: (
     color: $yellow-100;
   }
 
+  .auth-form .box,
+  .auth-form .toolbar,
+  .splash-page-sub-header .toolbar {
+    background-color: $ui-gray-800;
+  }
+
   @each $name, $pair in $colors {
     $color: nth($pair, 2);
     .has-text-#{$name} {
@@ -91,6 +102,9 @@ $darkShades: (
   @each $name, $shade in $darkShades {
     .has-text-#{$name} {
       color: $shade !important;
+    }
+    .has-background-#{$name} {
+      background: $shade !important;
     }
   }
 }
