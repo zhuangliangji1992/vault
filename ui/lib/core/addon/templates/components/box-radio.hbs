@@ -11,22 +11,28 @@
         data-test-mount-type-radio
         data-test-mount-type={{type}}
       >
-        <Icon
-          @glyph={{glyph}}
-          @size="xl"
-          class="has-text-grey-light"
-        />
-        {{displayName}}
-        <RadioButton
-          @value={{type}}
-          @radioClass="radio"
-          @groupValue={{groupValue}}
-          @changed={{onRadioChange}}
-          @name={{groupName}}
-          @radioId={{type}}
-          @disabled={{disabled}}
-        />
-        <label for={{type}}></label>
+        <div class="box-radio-upper">
+          <Icon
+            @glyph={{glyph}}
+            @size="xl"
+            class="has-text-grey-light"
+          />
+          <div class="box-radio-label">
+            {{displayName}}
+          </div>
+          <RadioButton
+            @value={{type}}
+            @radioClass="radio"
+            @groupValue={{groupValue}}
+            @changed={{onRadioChange}}
+            @name={{groupName}}
+            @radioId={{type}}
+            @disabled={{disabled}}
+          />
+        </div>
+        <div class="box-radio-base">
+          <label for={{type}}></label>
+        </div>
       </label>
     </T.trigger>
     <T.content @class="tool-tip">
@@ -50,7 +56,9 @@
       @size="xl"
       class="has-text-grey-light"
     />
-    {{displayName}}
+    <div class="box-radio-label">
+      {{displayName}}
+    </div>
     <RadioButton
       @value={{type}}
       @radioClass="radio"
@@ -60,7 +68,9 @@
       @radioId={{type}}
       @disabled={{disabled}}
       />
-    <label for={{type.type}}></label>
+    <div class="box-radio-base">
+      <label for={{type.type}}></label>
+    </div>
   </label>
   </div>
 {{/if}}

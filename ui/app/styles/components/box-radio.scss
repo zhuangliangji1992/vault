@@ -2,23 +2,25 @@
   display: flex;
   flex-wrap: wrap;
 }
-.title.box-radio-header {
-  font-size: $size-6;
-  color: $grey;
-  margin: $size-7 0 0 0;
-  @media (prefers-color-scheme: dark) {
-    color: $ui-gray-010;
-  }
-}
 .box-radio-spacing {
   margin: $size-6 $size-3 $size-6 0;
+}
+.box-radio-base {
+  padding: $spacing-xs $spacing-s $spacing-s;
+  width: 100%;
+  background: $ui-gray-700;
+  border-radius: 0 0 $radius $radius;
+}
+.box-radio-label {
+  padding: 0 $spacing-m;
+  margin-bottom: $spacing-s;
 }
 .box-radio {
   box-sizing: border-box;
   flex-basis: 7rem;
   width: 7rem;
   min-height: 7.5rem;
-  padding: $size-10 $size-6 $size-10;
+  padding: $size-10 0 0 0;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -34,8 +36,12 @@
   transition: box-shadow ease-in-out $speed;
   will-change: box-shadow;
   @media (prefers-color-scheme: dark) {
-    background-color: $ui-gray-800;
-    color: $ui-gray-050;
+    background-color: $ui-gray-200;
+    // background-image: linear-gradient(to bottom, $ui-gray-500, $ui-gray-800);
+    color: $ui-gray-800;
+    .has-text-grey-light {
+      color: $ui-gray-800 !important;
+    }
   }
 
   &.is-selected {
@@ -55,7 +61,7 @@
     opacity: 0;
   }
 
-  input[type='radio'].radio + label {
+  input[type='radio'].radio + .box-radio-base label {
     border: 1px solid $grey-light;
     border-radius: 50%;
     cursor: pointer;
@@ -67,7 +73,7 @@
     flex-grow: 0;
   }
 
-  input[type='radio'].radio:checked + label {
+  input[type='radio'].radio:checked + .box-radio-base label {
     background: $blue;
     border: 1px solid $blue;
     box-shadow: inset 0 0 0 0.15rem $white;
@@ -77,7 +83,7 @@
       background: $vault-yellow;
     }
   }
-  input[type='radio'].radio:focus + label {
+  input[type='radio'].radio:focus + .box-radio-base label {
     // box-shadow: 0 0 10px 1px rgba($blue, 0.4), inset 0 0 0 0.15rem $white;
     @media (prefers-color-scheme: dark) {
       // box-shadow: 0 0 10px 1px rgba($vault-yellow, 0.4), inset 0 0 0 0.15rem $red;
