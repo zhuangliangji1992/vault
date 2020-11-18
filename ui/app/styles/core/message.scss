@@ -18,6 +18,10 @@
     position: absolute;
     right: $spacing-s;
     top: $spacing-m;
+
+    @media (prefers-color-scheme: dark) {
+      color: white;
+    }
   }
 
   .message-title {
@@ -101,6 +105,16 @@
 
     .message-title {
       color: $green-700;
+
+      @media (prefers-color-scheme: dark) {
+        color: white;
+      }
+    }
+
+    .message-body {
+      @media (prefers-color-scheme: dark) {
+        color: white;
+      }
     }
   }
 
@@ -108,12 +122,21 @@
     background: $red-010;
     border: 1px solid $red-050;
 
+    @media (prefers-color-scheme: dark) {
+      background: darken($red-100, 60);
+      border: 1px solid $red-500;
+    }
+
     .message-icon {
       color: $red-500;
     }
 
     .message-title {
       color: $red-700;
+
+      @media (prefers-color-scheme: dark) {
+        color: white;
+      }
     }
   }
 }
