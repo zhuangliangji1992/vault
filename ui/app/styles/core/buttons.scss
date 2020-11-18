@@ -15,6 +15,9 @@ $button-box-shadow-standard: 0 3px 1px 0 rgba($black, 0.12);
   text-decoration: none;
   transition: background-color $speed, border-color $speed, box-shadow $speed, color $speed;
   vertical-align: middle;
+  @media (prefers-color-scheme: dark) {
+    background: $ui-gray-300;
+  }
 
   &.is-icon {
     padding: 0.25rem $size-3;

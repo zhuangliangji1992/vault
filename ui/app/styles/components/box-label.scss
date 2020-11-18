@@ -23,6 +23,9 @@ label.box-label {
 
   &.is-selected {
     box-shadow: $box-link-hover-shadow, $box-shadow-middle;
+    @media (prefers-color-scheme: dark) {
+      background: $grey-dark;
+    }
 
     .icon {
       color: $grey;
@@ -55,7 +58,7 @@ label.box-label {
     @media (prefers-color-scheme: dark) {
       background: $vault-yellow;
       border: 1px solid $vault-yellow;
-      box-shadow: inset 0 0 0 0.15rem $white;
+      box-shadow: inset 0 0 0 0.15rem $grey-darkest;
     }
   }
 }

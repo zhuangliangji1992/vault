@@ -76,3 +76,24 @@ pre {
   background: #f7f8fa;
   border-top: 1px solid #bac1cc;
 }
+
+@media (prefers-color-scheme: dark) {
+  .modal-background {
+    background: rgba($grey-darkest, 0.9);
+    border-color: $ui-gray-500;
+  }
+  .modal-card,
+  .modal-card-body,
+  .modal-card-foot,
+  .modal-card-head {
+    background: $ui-gray-800;
+    border-color: $ui-gray-500;
+  }
+  .is-highlight .modal-card-head {
+    background: $dark-highlight;
+    border: 1px solid $yellow-500;
+  }
+  .is-highlight .modal-card-title {
+    color: $white;
+  }
+}

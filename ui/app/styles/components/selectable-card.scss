@@ -59,6 +59,9 @@
     font-size: 36px;
     font-weight: 500;
     line-height: 1.33;
+    @media (prefers-color-scheme: dark) {
+      color: $white;
+    }
   }
 
   .vlt-table {

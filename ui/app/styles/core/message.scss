@@ -90,6 +90,11 @@
     background: $green-010;
     border: 1px solid $green-100;
 
+    @media (prefers-color-scheme: dark) {
+      background: darken($green-100, 60);
+      border: 1px solid $green-500;
+    }
+
     .message-icon {
       color: $green-500;
     }
