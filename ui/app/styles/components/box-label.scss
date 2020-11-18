@@ -51,6 +51,12 @@ label.box-label {
     background: $blue;
     border: 1px solid $blue;
     box-shadow: inset 0 0 0 0.15rem $white;
+
+    @media (prefers-color-scheme: dark) {
+      background: $vault-yellow;
+      border: 1px solid $vault-yellow;
+      box-shadow: inset 0 0 0 0.15rem $white;
+    }
   }
 }
 
@@ -59,5 +65,9 @@ label.box-label {
 
   .is-selected & {
     color: $text;
+
+    @media (prefers-color-scheme: dark) {
+      color: $vault-yellow;
+    }
   }
 }

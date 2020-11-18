@@ -10,6 +10,10 @@ $darkShades: (
   'white-bis': $black-bis,
 ) !default;
 
+$darkShadesIs: (
+  'light': $ui-gray-500,
+) !default;
+
 @media (prefers-color-scheme: dark) {
   body,
   html {
@@ -104,6 +108,12 @@ $darkShades: (
       color: $shade !important;
     }
     .has-background-#{$name} {
+      background: $shade !important;
+    }
+  }
+
+  @each $name, $shade in $darkShadesIs {
+    .is-#{$name} {
       background: $shade !important;
     }
   }
