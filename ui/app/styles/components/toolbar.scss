@@ -25,6 +25,9 @@
     top: 0;
     width: $spacing-xxs;
     z-index: 2;
+    @media (prefers-color-scheme: dark) {
+      background: linear-gradient(to right, $ui-gray-900, rgba($ui-gray-900, 0));
+    }
   }
 
   .input,

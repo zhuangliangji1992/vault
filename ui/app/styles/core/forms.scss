@@ -222,6 +222,9 @@ label {
   // cannot use :read-only selector because tag used for other purposes
   &.is-readOnly {
     background-color: $ui-gray-100;
+    @media (prefers-color-scheme: dark) {
+      background-color: $ui-gray-700;
+    }
   }
 }
 .field.has-addons {
