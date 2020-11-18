@@ -1,0 +1,7 @@
+.navbar-item {
+  @media (prefers-color-scheme: dark) {
+    .has-text-white {
+      color: white !important;
+    }
+  }
+}

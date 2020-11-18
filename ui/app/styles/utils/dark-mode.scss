@@ -82,6 +82,14 @@ $darkShadesIs: (
     box-shadow: 0 0 0 0.125em rgba(251, 217, 94, 0.25);
   }
 
+  .toolbar-link {
+    color: $vault-yellow;
+  }
+
+  .toolbar-link[disabled] {
+    color: black;
+  }
+
   code {
     color: $yellow-100;
   }
