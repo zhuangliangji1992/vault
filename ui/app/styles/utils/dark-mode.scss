@@ -147,4 +147,8 @@ $darkShadesIs: (
       background: $shade !important;
     }
   }
+
+  .button.has-text-grey.is-icon {
+    color: $ui-gray-700 !important;
+  }
 }
