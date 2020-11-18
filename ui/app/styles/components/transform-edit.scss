@@ -1,8 +1,16 @@
 .copy-text {
   background: $ui-gray-010;
 
+  @media (prefers-color-scheme: dark) {
+    background: $ui-gray-500;
+  }
+
   & > code {
     color: $ui-gray-800;
     padding: 14px;
+
+    @media (prefers-color-scheme: dark) {
+      color: white;
+    }
   }
 }
