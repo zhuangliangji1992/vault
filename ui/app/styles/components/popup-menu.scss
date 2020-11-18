@@ -9,6 +9,9 @@
     padding: 0;
     position: relative;
     width: 200px;
+    @media (prefers-color-scheme: dark) {
+      background-color: $ui-gray-800;
+    }
   }
 
   &.is-wide > .box {
@@ -49,10 +52,18 @@
   a {
     background-color: $white;
     color: $menu-item-color;
+    @media (prefers-color-scheme: dark) {
+      background-color: transparent;
+      color: $white;
+    }
 
     &:hover {
       background-color: $menu-item-hover-background-color;
       color: $menu-item-hover-color;
+      @media (prefers-color-scheme: dark) {
+        background-color: rgba($black, 0.25);
+        color: $vault-yellow;
+      }
     }
 
     &.is-active {

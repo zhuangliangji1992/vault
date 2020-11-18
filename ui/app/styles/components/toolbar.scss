@@ -98,7 +98,7 @@
   transition: background-color $speed;
 
   @media (prefers-color-scheme: dark) {
-    color: $vault-yellow;
+    color: $ui-gray-100;
   }
 
   &:hover {
@@ -108,11 +108,15 @@
 
     @media (prefers-color-scheme: dark) {
       background-color: darken($grey-darkest, 5);
+      color: $vault-yellow;
     }
   }
 
   &:active {
     box-shadow: none;
+    @media (prefers-color-scheme: dark) {
+      color: $white;
+    }
   }
 
   &.popup-menu-trigger {

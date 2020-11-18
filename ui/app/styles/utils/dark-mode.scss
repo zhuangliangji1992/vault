@@ -89,6 +89,20 @@ $darkShadesIs: (
     background-color: $ui-gray-800;
   }
 
+  .table {
+    background-color: $grey-darkest;
+    color: $white;
+  }
+
+  .masked-input.display-only .masked-value {
+    color: $ui-gray-200;
+  }
+  .masked-input:not(.masked) .masked-input-toggle,
+  .display-only .button.masked-input-toggle:hover,
+  .display-only .button.copy-button:hover {
+    color: $vault-yellow;
+  }
+
   @each $name, $pair in $colors {
     $color: nth($pair, 2);
     .has-text-#{$name} {

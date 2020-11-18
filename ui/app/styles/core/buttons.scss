@@ -139,7 +139,8 @@ $button-box-shadow-standard: 0 3px 1px 0 rgba($black, 0.12);
       background-color: $grey-lightest;
 
       @media (prefers-color-scheme: dark) {
-        background-color: $vault-yellow;
+        color: $vault-yellow;
+        background-color: rgba($black, 0.25);
       }
     }
   }
