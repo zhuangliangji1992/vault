@@ -66,6 +66,10 @@
 
   &.ember-basic-dropdown-content {
     background: $white;
+    @media (prefers-color-scheme: dark) {
+      background: $grey-darkest;
+      color: $white;
+    }
   }
 
   @include from($mobile) {
@@ -102,6 +106,9 @@
   text-decoration: none;
   font-weight: $font-weight-semibold;
   padding: $size-10 $size-9 $size-10 0;
+  @media (prefers-color-scheme: dark) {
+    color: $white;
+  }
 }
 
 .namespace-link.is-current {
@@ -121,6 +128,10 @@
   right: 0;
   bottom: 0;
   z-index: 1;
+  @media (prefers-color-scheme: dark) {
+    background: $grey-darkest;
+    color: $white;
+  }
 }
 .leaf-panel-left {
   transform: translateX(-$drawer-width);
