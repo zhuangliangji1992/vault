@@ -77,6 +77,9 @@ label {
   color: $grey;
   margin-bottom: 0.25rem;
   font-size: $size-8;
+  @media (prefers-color-scheme: dark) {
+    color: $ui-gray-300;
+  }
 }
 .input,
 .textarea,
