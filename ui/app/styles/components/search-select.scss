@@ -54,6 +54,11 @@
   border: 0;
   padding: $spacing-xxs $spacing-s;
   padding-left: $spacing-xxs + $spacing-l;
+
+  @media (prefers-color-scheme: dark) {
+    background: black;
+    color: white;
+  }
 }
 
 div > .ember-power-select-options {
@@ -62,6 +67,11 @@ div > .ember-power-select-options {
   box-shadow: $box-shadow-middle;
   margin: -4px $spacing-xs 0;
   padding: $spacing-xxs 0;
+
+  @media (prefers-color-scheme: dark) {
+    background: black;
+    color: white;
+  }
 
   .ember-power-select-option,
   .ember-power-select-option[aria-current='true'] {
@@ -73,6 +83,11 @@ div > .ember-power-select-options {
   .ember-power-select-option[aria-current='true'] {
     background-color: $menu-item-hover-background-color;
     color: $menu-item-hover-color;
+
+    @media (prefers-color-scheme: dark) {
+      background: black;
+      color: white;
+    }
   }
 
   .ember-power-select-option--no-matches-message {
