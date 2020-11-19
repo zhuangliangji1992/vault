@@ -90,6 +90,10 @@ $darkShadesIs: (
     color: black;
   }
 
+  .toolbar-link:hover {
+    color: $vault-yellow;
+  }
+
   code {
     color: $yellow-100;
   }
@@ -150,5 +154,9 @@ $darkShadesIs: (
 
   .button.has-text-grey.is-icon {
     color: $ui-gray-700 !important;
+  }
+
+  .copy-btn:hover > .hs-icon svg {
+    color: $vault-yellow;
   }
 }

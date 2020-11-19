@@ -124,6 +124,10 @@
     display: flex;
     padding: $spacing-xxs;
 
+    @media (prefers-color-scheme: dark) {
+      background: $ui-gray-700;
+    }
+
     .link {
       flex: 1;
       text-align: center;

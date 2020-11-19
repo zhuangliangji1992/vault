@@ -65,6 +65,10 @@ pre {
   margin: $spacing-xxs 0;
   strong {
     color: inherit;
+
+    @media (prefers-color-scheme: dark) {
+      color: $dark-highlight;
+    }
   }
 }
 
@@ -95,5 +99,13 @@ pre {
   }
   .is-highlight .modal-card-title {
     color: $white;
+  }
+  .button.is-white {
+    background-color: transparent;
+    border-color: transparent;
+    color: white;
+  }
+  button.link:hover {
+    color: lighten($vault-yellow, 10%);
   }
 }

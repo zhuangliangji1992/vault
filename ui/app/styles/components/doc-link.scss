@@ -2,4 +2,8 @@
   color: $link;
   text-decoration: none;
   font-weight: $font-weight-semibold;
+
+  @media (prefers-color-scheme: dark) {
+    color: $vault-yellow;
+  }
 }
