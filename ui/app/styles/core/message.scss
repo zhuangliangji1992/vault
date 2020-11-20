@@ -5,9 +5,23 @@
   padding: $spacing-s $spacing-m $spacing-m $spacing-s;
   position: relative;
 
+  @media (prefers-color-scheme: dark) {
+    background-color: darken($blue-010, 60) !important;
+  }
+
   .message-icon {
     color: $blue;
     margin-right: $spacing-xs;
+
+    @media (prefers-color-scheme: dark) {
+      color: white;
+    }
+  }
+
+  .message-body {
+    @media (prefers-color-scheme: dark) {
+      color: white !important;
+    }
   }
 
   .close-button {
@@ -29,6 +43,10 @@
     font-size: 16px;
     font-weight: $font-weight-bold;
     line-height: 1.25;
+
+    @media (prefers-color-scheme: dark) {
+      color: white;
+    }
 
     .progress {
       margin-left: $spacing-xs;
