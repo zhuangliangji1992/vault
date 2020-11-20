@@ -5,8 +5,10 @@
   padding: $spacing-s $spacing-m $spacing-m $spacing-s;
   position: relative;
 
-  @media (prefers-color-scheme: dark) {
-    background-color: darken($blue-010, 60) !important;
+  &.is-info {
+    @media (prefers-color-scheme: dark) {
+      background-color: darken($blue-010, 60);
+    }
   }
 
   .message-icon {
